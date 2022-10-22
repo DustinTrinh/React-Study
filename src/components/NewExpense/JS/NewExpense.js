@@ -5,8 +5,8 @@ const NewExpense = (props) => {
 
     const saveNewExpenseData = (newExpenseData) =>{
         const data = {
-            ...newExpenseData,
-            id: Math.random().toString()
+            id: Math.floor(Math.random()*90000) + 10000,
+            ...newExpenseData
         };
         props.newExpenseGetter(data);
     };
